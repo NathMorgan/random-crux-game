@@ -37,11 +37,9 @@ const MenuItem menuItems[3] ={
 };
 
 int selectedMenuItem = 1;
-int numMenuItems;
+const int numMenuItems = sizeof(menuItems) / sizeof(MenuItem);
 
 void initMenuState() {
-    const int numMenuItems = sizeof(menuItems) / sizeof(MenuItem);
-
     // Init menu textures
     menuImages.background = GRRLIB_LoadTexture(background_image_jpg);
     menuImages.backgroundTuqiri = GRRLIB_LoadTexturePNG(background_tuqiri_png);
@@ -68,9 +66,7 @@ void drawMenuState() {
     GRRLIB_DrawImg(150, 0, menuImages.backgroundTuqiri, 0, 1, 1, 0xFFFFFFFF);
     GRRLIB_Printf(32, 32, menuImages.font, 0xFFFFFFFF, 1, "RANDOM CRUX GAME");
 
-    sendDebugMessage("Test: %i", numMenuItems);
-
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < numMenuItems; i++) {
         drawMenuItem(menuItems[i].name, menuItems[i].id, selectedMenuItem);
     }
 }
