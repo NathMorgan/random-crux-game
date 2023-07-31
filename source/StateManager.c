@@ -13,6 +13,11 @@ void setCurrentStateFunction(SetCurrentStateFunction func) {
 
 void setCurrentState(GameState newState) {
     currentState = newState;
+
+    if (setCurrentStateFunc) {
+        setCurrentStateFunc(newState);
+    }
+
     initState();
 }
 
