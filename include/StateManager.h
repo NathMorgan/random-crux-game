@@ -1,6 +1,8 @@
 #ifndef STATEMANAGER_H
 #define STATEMANAGER_H
 
+#include <stdbool.h>
+
 typedef enum {
     STATE_MENU,
     STATE_HELP,
@@ -15,6 +17,8 @@ typedef void (*SetCurrentStateFunction)(GameState newState);
 void setCurrentStateFunction(SetCurrentStateFunction func);
 
 void setCurrentState(GameState newState);
+
+void setIsLoading(bool loading);
 
 GameState getCurrentState();
 

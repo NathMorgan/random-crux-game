@@ -7,10 +7,10 @@
 
 static GameState currentState;
 static SetCurrentStateFunction setCurrentStateFunc;
-static isLoading = false;
+static bool isLoading = false;
 
 void setCurrentStateFunction(SetCurrentStateFunction func) {
-    setCurrentStateFunc = func;
+    setCurrentStateFunc = func ;
 }
 
 void setCurrentState(GameState newState) {
