@@ -25,4 +25,9 @@ void drawMenuState();
  */
 void drawMenuItem(const char *name, int menuPosition, int currentPosition);
 
+/**
+ * Destroy menu objects / images
+ */
+void destroyMenu();
+
 #endif

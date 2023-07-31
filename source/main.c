@@ -9,22 +9,21 @@
 
 #include "StateManager.h"
 
-void mainChangeState(GameState newState) {
-    sendDebugMessage("Custom changeState called! New state: %d\n", newState);
-}
-
 int main(void) {
     GRRLIB_Init();
     GRRLIB_Settings.antialias = false;
     PAD_Init();
-
-    setCurrentStateFunction(mainChangeState);
+    
     setCurrentState(STATE_MENU);
 
     sendDebugMessage("Debug Start");
 
     while (getCurrentState() != STATE_EXIT) {
         PAD_ScanPads();
+
+        if(PAD_ButtonsDown(0) & PAD_BUTTON_MENU) {
+            setCurrentState(STATE_MENU);
+        }
 
         updateState();
         drawState();

@@ -3,15 +3,18 @@
 #include "AboutState.h"
 #include "PlayState.h"
 #include "GameOverState.h"
+#include <stdbool.h>
 
 static GameState currentState;
 static SetCurrentStateFunction setCurrentStateFunc;
+static isLoading = false;
 
 void setCurrentStateFunction(SetCurrentStateFunction func) {
     setCurrentStateFunc = func;
 }
 
 void setCurrentState(GameState newState) {
+    setIsLoading(true);
     currentState = newState;
 
     if (setCurrentStateFunc) {
@@ -19,6 +22,11 @@ void setCurrentState(GameState newState) {
     }
 
     initState();
+    setIsLoading(false);
+}
+
+void setIsLoading(bool loading) {
+    isLoading = loading;
 }
 
 GameState getCurrentState() {
@@ -47,6 +55,11 @@ void initState() {
 }
 
 void updateState() {
+    // Do not update if isLoading is set to true
+    if (isLoading) {
+        return;
+    }
+
     switch (currentState) {
         case STATE_MENU:
             updateMenuState();
@@ -68,6 +81,11 @@ void updateState() {
 }
 
 void drawState() {
+    // Do not draw if isLoading is set to true
+    if (isLoading) {
+        return;
+    }
+
     switch (currentState) {
         case STATE_MENU:
             drawMenuState();
