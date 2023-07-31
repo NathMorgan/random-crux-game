@@ -36,7 +36,7 @@ const MenuItem menuItems[3] ={
     {3, "INFO", STATE_ABOUT},
 };
 
-int selectedMenuItem = 1;
+int selectedMenuItemPos = 1;
 const int numMenuItems = sizeof(menuItems) / sizeof(MenuItem);
 
 void initMenuState() {
@@ -51,12 +51,12 @@ void initMenuState() {
 
 void updateMenuState() {
     if(PAD_ButtonsDown(0) & PAD_BUTTON_DOWN) {
-        if (selectedMenuItem != numMenuItems) {
-            selectedMenuItem++;
+        if (selectedMenuItemPos != numMenuItems) {
+            selectedMenuItemPos++;
         }
     } else if (PAD_ButtonsDown(0) & PAD_BUTTON_UP) {
-        if (selectedMenuItem > 1) {
-            selectedMenuItem--;
+        if (selectedMenuItemPos > 1) {
+            selectedMenuItemPos--;
         }
     }
 }
@@ -67,7 +67,7 @@ void drawMenuState() {
     GRRLIB_Printf(32, 32, menuImages.font, 0xFFFFFFFF, 1, "RANDOM CRUX GAME");
 
     for (int i = 0; i < numMenuItems; i++) {
-        drawMenuItem(menuItems[i].name, menuItems[i].id, selectedMenuItem);
+        drawMenuItem(menuItems[i].name, menuItems[i].id, selectedMenuItemPos);
     }
 }
 
