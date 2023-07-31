@@ -39,6 +39,10 @@ const MenuItem menuItems[3] ={
 int selectedMenuItemPos = 1;
 const int numMenuItems = sizeof(menuItems) / sizeof(MenuItem);
 
+void menuChangeState(GameState newState) {
+    sendDebugMessage("Custom changeState called! New state: %d\n", newState);
+}
+
 void initMenuState() {
     // Init menu textures
     menuImages.background = GRRLIB_LoadTexture(background_image_jpg);
@@ -47,6 +51,9 @@ void initMenuState() {
 
     // Init menu tileset
     GRRLIB_InitTileSet(menuImages.font, 8, 16, 32);
+
+    // Init state change function
+    setCurrentStateFunction(menuChangeState);
 }
 
 void updateMenuState() {
