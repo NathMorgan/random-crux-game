@@ -41,6 +41,7 @@ const int numMenuItems = sizeof(menuItems) / sizeof(MenuItem);
 
 void menuChangeState(GameState newState) {
     sendDebugMessage("Custom changeState called! New state: %d\n", newState);
+    destroyMenu();
 }
 
 void initMenuState() {
@@ -89,4 +90,14 @@ void drawMenuItem(const char *name, int menuPosition, int currentPosition) {
     }
 
     GRRLIB_Printf(32, 100 + (menuPosition * 40), menuImages.font, colour, 1, name);
+}
+
+void destroyMenu() {
+    // Clean up menu textures
+    GRRLIB_FreeTexture(menuImages.background);
+    GRRLIB_FreeTexture(menuImages.backgroundTuqiri);
+    GRRLIB_FreeTexture(menuImages.font);
+
+    // Unset the menu state change function
+    setCurrentStateFunction();
 }
