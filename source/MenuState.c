@@ -58,6 +58,9 @@ void updateMenuState() {
         if (selectedMenuItemPos > 1) {
             selectedMenuItemPos--;
         }
+    } else if (PAD_ButtonsDown(0) & PAD_BUTTON_A) {
+        const MenuItem slectedMenuItem = menuItems[selectedMenuItemPos];
+        setCurrentState(slectedMenuItem.state);
     }
 }
 
