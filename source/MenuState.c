@@ -99,5 +99,5 @@ void destroyMenu() {
     GRRLIB_FreeTexture(menuImages.font);
 
     // Unset the menu state change function
-    setCurrentStateFunction();
+    setCurrentStateFunction(false);
 }
