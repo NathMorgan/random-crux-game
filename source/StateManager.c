@@ -38,7 +38,7 @@ void initState() {
         case STATE_MENU:
             initMenuState();
             break;
-        case STATE_ABOUT:
+        case STATE_INFO:
             initAboutState();
             break;
         case STATE_PLAY:
@@ -64,7 +64,7 @@ void updateState() {
         case STATE_MENU:
             updateMenuState();
             break;
-        case STATE_ABOUT:
+        case STATE_INFO:
             updateAboutState();
             break;
         case STATE_PLAY:
@@ -90,7 +90,7 @@ void drawState() {
         case STATE_MENU:
             drawMenuState();
             break;
-        case STATE_ABOUT:
+        case STATE_INFO:
             drawAboutState();
             break;
         case STATE_PLAY:

@@ -33,7 +33,7 @@ MenuImage menuImages;
 const MenuItem menuItems[3] ={
     {0, "START", STATE_PLAY},
     {1, "HELP", STATE_HELP},
-    {2, "INFO", STATE_ABOUT}
+    {2, "INFO", STATE_INFO}
 };
 
 int selectedMenuItemPos = 0;
