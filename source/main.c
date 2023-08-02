@@ -19,10 +19,6 @@ int main(void) {
     while (getCurrentState() != STATE_EXIT) {
         PAD_ScanPads();
 
-        if(PAD_ButtonsDown(0) & PAD_BUTTON_MENU) {
-            setCurrentState(STATE_MENU);
-        }
-
         updateState();
         drawState();
 
