@@ -1,9 +1,4 @@
 #include "StateManager.h"
-#include "MenuState.h"
-#include "AboutState.h"
-#include "PlayState.h"
-#include "GameOverState.h"
-#include <stdbool.h>
 
 static GameState currentState;
 static SetCurrentStateFunction setCurrentStateFunc;

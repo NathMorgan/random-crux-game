@@ -1,6 +1,12 @@
 #ifndef STATEMANAGER_H
 #define STATEMANAGER_H
 
+#include "general.h"
+#include "MenuState.h"
+#include "AboutState.h"
+#include "PlayState.h"
+#include "GameOverState.h"
+
 #include <stdbool.h>
 
 typedef enum {

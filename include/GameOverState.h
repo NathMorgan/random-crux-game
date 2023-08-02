@@ -1,6 +1,8 @@
 #ifndef GAMEOVERSTATE_H
 #define GAMEOVERSTATE_H
 
+#include "general.h"
+
 void initGameOverState();
 
 void updateGameOverState();

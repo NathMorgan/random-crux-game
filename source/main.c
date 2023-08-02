@@ -7,8 +7,6 @@
 #include <ogc/pad.h>
 #include "general.h"
 
-#include "StateManager.h"
-
 int main(void) {
     GRRLIB_Init();
     GRRLIB_Settings.antialias = false;

@@ -1,20 +1,4 @@
 #include "MenuState.h"
-#include <grrlib.h>
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <malloc.h>
-#include <ogc/pad.h>
-#include "general.h"
-#include "StateManager.h"
-
-// Meda Files
-#include "font_png.h"
-#include "background_image_jpg.h"
-#include "background_tuqiri_png.h"
-#include "bg_png.h"
-#include "bg_test_png.h"
 
 typedef struct
 {
