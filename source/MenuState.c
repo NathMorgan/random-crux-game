@@ -31,12 +31,12 @@ typedef struct {
 
 MenuImage menuImages;
 const MenuItem menuItems[3] ={
-    {1, "START", STATE_PLAY},
-    {2, "HELP", STATE_HELP},
-    {3, "INFO", STATE_ABOUT},
+    {0, "START", STATE_PLAY},
+    {1, "HELP", STATE_HELP},
+    {2, "INFO", STATE_ABOUT}
 };
 
-int selectedMenuItemPos = 1;
+int selectedMenuItemPos = 0;
 const int numMenuItems = sizeof(menuItems) / sizeof(MenuItem);
 
 void menuChangeState(GameState newState) {
@@ -63,7 +63,7 @@ void updateMenuState() {
             selectedMenuItemPos++;
         }
     } else if (PAD_ButtonsDown(0) & PAD_BUTTON_UP) {
-        if (selectedMenuItemPos > 1) {
+        if (selectedMenuItemPos > 0) {
             selectedMenuItemPos--;
         }
     } else if (PAD_ButtonsDown(0) & PAD_BUTTON_A) {
