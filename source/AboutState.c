@@ -1,13 +1,46 @@
 #include "AboutState.h"
 
+typedef struct
+{
+    GRRLIB_texImg *background;
+    GRRLIB_texImg *font;
+} AboutImage;
+
+AboutImage aboutImages;
+
+void aboutChangeState(GameState newState) {
+    sendDebugMessage("Custom changeState called! New state: %d\n", newState);
+    destroyAbout();
+}
+
 void initAboutState() {
-    // Initialize the about state
+    // Init about textures
+    aboutImages.background = GRRLIB_LoadTexture(background_image_jpg);
+    aboutImages.font = GRRLIB_LoadTexture(font_png);
+
+    // Init menu tileset
+    GRRLIB_InitTileSet(aboutImages.font, 8, 16, 32);
+
+    // Init state change function
+    setCurrentStateFunction(aboutChangeState);
 }
 
 void updateAboutState() {
-    // Update the about state logic
+    if(PAD_ButtonsDown(0) & PAD_BUTTON_MENU) {
+        setCurrentState(STATE_MENU);
+    }
 }
 
 void drawAboutState() {
-    // Draw the about state graphics
+    GRRLIB_DrawImg(0, 0, aboutImages.background, 0, 1, 1, RGBA(255, 255, 255, 255));
+    GRRLIB_Printf(32, 32, aboutImages.font, 0xFFFFFFFF, 1, "RANDOM CRUX GAME > ABOUT");
+}
+
+void destroyAbout() {
+    // Clean up menu textures
+    GRRLIB_FreeTexture(aboutImages.background);
+    GRRLIB_FreeTexture(aboutImages.font);
+
+    // Unset the menu state change function
+    setCurrentStateFunction(false);
 }
