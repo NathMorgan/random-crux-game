@@ -1,4 +1,4 @@
-#include "Bullet.h"
+#include "entities/Bullet.h"
 
 typedef struct {
     int posX, posY;
@@ -24,11 +24,8 @@ void addBullet(
     int height,
     bool isPlayerBullet
 ) {
-    sendDebugMessage("Rendering Bullet");
-
     for(int i = 0; i < MAX_BULLETS; ++i) {
         if(!bullets[i].active) {
-            sendDebugMessage("Render Bullet");
             bullets[i].posX = posX;
             bullets[i].posY = posY;
             bullets[i].width = width;
@@ -56,11 +53,6 @@ void updateBullets() {
 
 void drawBullet(Bullet* bullet) {
     if (bullet->active) {
-        sendDebugMessage("Drawing Bullet");
-
-        sendDebugMessage("Bullet posX: %i", bullet->posX);
-        sendDebugMessage("Bullet posy: %i", bullet->posY);
-
         GRRLIB_Rectangle(bullet->posX, bullet->posY, bullet->width, bullet->height, 0xFFFFFFFF, true);
     }
 }

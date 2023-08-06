@@ -1,7 +1,7 @@
 #ifndef ABOUTSTATE_H
 #define ABOUTSTATE_H
 
-#include "general.h"
+#include "core/general.h"
 
 void initAboutState();
 

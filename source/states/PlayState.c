@@ -1,5 +1,4 @@
-#include "PlayState.h"
-#include <timer.h>
+#include "states/PlayState.h"
 
 #define SHOOT_DELAY 1500
 

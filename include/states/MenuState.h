@@ -1,7 +1,7 @@
 #ifndef MENUSTATE_H
 #define MENUSTATE_H
 
-#include "general.h"
+#include "core/general.h"
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,11 +1,11 @@
 #ifndef STATEMANAGER_H
 #define STATEMANAGER_H
 
-#include "general.h"
-#include "MenuState.h"
-#include "AboutState.h"
-#include "PlayState.h"
-#include "GameOverState.h"
+#include "core/general.h"
+#include "states/MenuState.h"
+#include "states/AboutState.h"
+#include "states/PlayState.h"
+#include "states/GameOverState.h"
 
 #include <stdbool.h>
 

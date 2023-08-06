@@ -1,8 +1,8 @@
 #ifndef PLAYSTATE_H
 #define PLAYSTATE_H
 
-#include "general.h"
-#include "Bullet.h"
+#include "core/general.h"
+#include "entities/Bullet.h"
 
 void initPlayState();
 

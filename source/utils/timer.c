@@ -2,7 +2,7 @@
 * This class is based on code by Owen Soft, found at:
 * https://owensoft.net/project/code/
 */
-#include "timer.h"
+#include "utils/timer.h"
 
 u64 timer_get_time(){	
     return (gettime() / TB_TIMER_CLOCK);

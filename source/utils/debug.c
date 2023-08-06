@@ -1,4 +1,4 @@
-#include "debug.h"
+#include "utils/debug.h"
 
 void sendDebugMessage(char *message, ...) {
     if (DEBUG) {

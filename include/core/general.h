@@ -3,9 +3,9 @@
 
 // Core Includes
 #include <grrlib.h>
-#include "debug.h"
-#include "timer.h"
-#include "StateManager.h"
+#include "utils/debug.h"
+#include "utils/timer.h"
+#include "core/StateManager.h"
 
 // Meda Files
 #include "font_png.h"

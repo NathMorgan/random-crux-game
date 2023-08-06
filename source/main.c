@@ -5,7 +5,7 @@
 #include <math.h>
 #include <malloc.h>
 #include <ogc/pad.h>
-#include "general.h"
+#include "core/general.h"
 
 int main(void) {
     GRRLIB_Init();
