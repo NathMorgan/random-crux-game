@@ -1,5 +1,5 @@
-#ifndef MENUSTATE_H
-#define MENUSTATE_H
+#ifndef MENU_STATE_H
+#define MENU_STATE_H
 
 #include "core/general.h"
 

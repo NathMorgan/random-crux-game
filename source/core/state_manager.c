@@ -1,4 +1,4 @@
-#include "core/StateManager.h"
+#include "core/state_manager.h"
 
 static GameState currentState;
 static SetCurrentStateFunction setCurrentStateFunc;

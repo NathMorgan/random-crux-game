@@ -1,4 +1,4 @@
-#include "entities/Bullet.h"
+#include "entities/bullet.h"
 
 typedef struct {
     int posX, posY;

@@ -1,5 +1,5 @@
-#ifndef ABOUTSTATE_H
-#define ABOUTSTATE_H
+#ifndef ABOUT_STATE_H
+#define ABOUT_STATE_H
 
 #include "core/general.h"
 

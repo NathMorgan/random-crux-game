@@ -5,7 +5,7 @@
 #include <grrlib.h>
 #include "utils/debug.h"
 #include "utils/timer.h"
-#include "core/StateManager.h"
+#include "core/state_manager.h"
 
 // Meda Files
 #include "font_png.h"

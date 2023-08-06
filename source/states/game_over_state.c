@@ -1,4 +1,4 @@
-#include "states/GameOverState.h"
+#include "states/game_over_state.h"
 
 void initGameOverState() {
     // Initialize the game over state

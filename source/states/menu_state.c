@@ -1,4 +1,4 @@
-#include "states/MenuState.h"
+#include "states/menu_state.h"
 
 typedef struct
 {

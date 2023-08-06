@@ -1,5 +1,5 @@
-#ifndef GAMEOVERSTATE_H
-#define GAMEOVERSTATE_H
+#ifndef GAME_OVER_STATE_H
+#define GAME_OVER_STATE_H
 
 #include "core/general.h"
 
