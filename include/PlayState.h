@@ -2,6 +2,7 @@
 #define PLAYSTATE_H
 
 #include "general.h"
+#include "Bullet.h"
 
 void initPlayState();
 
