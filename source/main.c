@@ -23,7 +23,7 @@ int main(void) {
         drawState();
 
         GRRLIB_Render();
-        printHeapInfo();
+        //printHeapInfo();
     }
 
     sendDebugMessage("Debug End");
