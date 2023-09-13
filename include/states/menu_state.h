@@ -1,14 +1,6 @@
 #ifndef MENU_STATE_H
 #define MENU_STATE_H
 
-#include "core/general.h"
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <malloc.h>
-#include <ogc/pad.h>
-
 /**
  * 
  */

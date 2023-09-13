@@ -1,11 +1,8 @@
 #include <grrlib.h>
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-#include <malloc.h>
-#include <ogc/pad.h>
-#include "core/general.h"
+#include "core/state_manager.h"
+#include "utils/debug.h"
 
 int main(void) {
     GRRLIB_Init();

@@ -1,10 +1,6 @@
 #ifndef _DEBUG_H
 #define _DEBUG_H
 
-#include "core/general.h"
-#include <stdio.h>
-#include <stdarg.h>
-
 /**
  * Send debug message to console if debug is enabled
  */

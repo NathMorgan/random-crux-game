@@ -1,4 +1,7 @@
 #include "utils/debug.h"
+#include "core/config.h"
+#include <stdio.h>
+#include <stdarg.h>
 
 void sendDebugMessage(char *message, ...) {
     if (DEBUG) {

@@ -1,4 +1,10 @@
 #include "states/menu_state.h"
+#include <grrlib.h>
+#include <ogc/pad.h>
+#include "core/state_manager.h"
+#include "background_image_jpg.h"
+#include "background_tuqiri_png.h"
+#include "font_png.h"
 
 typedef struct
 {

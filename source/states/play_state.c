@@ -1,21 +1,15 @@
 #include "states/play_state.h"
+#include <ogc/pad.h>
+#include "entities/bullet.h"
+#include "utils/timer.h"
+#include "background_tuqiri_png.h"
+#include "background_image_jpg.h"
+#include "tuqiri_player_png.h"
+#include "font_png.h"
 
 #define SHOOT_DELAY 1500
 
-typedef struct
-{
-    GRRLIB_texImg *background;
-    GRRLIB_texImg *tuqiriPlayer;
-    GRRLIB_texImg *font;
-} PlayImage;
-
 PlayImage playImages;
-
-typedef struct {
-    int x;
-    int y;
-    bool isShooting;
-} Player;
 
 Player player;
 

@@ -1,4 +1,5 @@
 #include "entities/bullet.h"
+#include <grrlib.h>
 
 typedef struct {
     int posX, posY;
